@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinates</title>
+    <style>
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 2px solid black;
+            margin-bottom: 5px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 2px solid black;
+            margin-bottom: 5px;
+            background-color: red;
+        }
+
+        .scrollButton {
+            position: sticky;
+            display: flex;
+            top: 0;
+            justify-content: flex-end;
+            margin-top: 5px;
+        }
+        
+        .sItem {
+            margin-right: 10px;
+            /* margin-left: auto; */
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollButton">
+        <button id="scrollBy" class="sItem">Scroll By 100px(y)</button>
+        <button id="scrollTo" class="sItem">Scroll To 100px(y)</button>
+        <button id="scrollInto" class="sItem">Scroll Into 100px(y)</button>
+    </div>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="box"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <script>
+        const box = document.querySelector('.box');
+        const boxRect = box.getBoundingClientRect();
+
+        box.addEventListener('click', e =>{
+            console.log(boxRect);
+            console.log(`client::: ${e.clientX}, ${e.clientY}`);
+            console.log(`page::: ${e.pageX}, ${e.pageY}`);
+        });
+
+        document.querySelector('#scrollBy').addEventListener('click', e => {
+            window.scrollBy(0, 100);
+            // window.scrollBy({ top: 100, left: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('#scrollTo').addEventListener('click', e => {
+            window.scrollTo(0, 100);
+        });
+
+        document.querySelector('#scrollInto').addEventListener('click', e =>{
+            window.scrollTo(boxRect);
+        });
+    </script>
+</body>
+</html>

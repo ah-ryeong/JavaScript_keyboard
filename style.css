@@ -1,0 +1,56 @@
+/* 게시판CSS */
+#ucontent {
+    width: 422px;
+    height: 304px;
+}
+
+#utitle {
+    width: 420px;
+    height: 18px;
+}
+
+/* 키보드CSS */
+.keyBoard {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    width: 430px;
+    height: 150px;
+}
+
+.keyButton {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+#keyRow2 .left {
+    margin-left: 20px;
+}
+
+#keyRow2 .right {
+    margin-right: 20px;
+}
+
+#keyRow3 .left {
+    margin-left: 40px;
+}
+
+#keyRow3 .right {
+    margin-right: 40px;
+}
+
+.spaceKey {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 70px;
+}

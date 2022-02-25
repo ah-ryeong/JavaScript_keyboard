@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script defer src="./main.js"></script>
+    <script defer src="./keyBoard.js"></script>
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td align="right">
+                <input type ="button" value="행추가1" onclick="addRow()" />
+                <button id ="btn-add-row">행추가2</button>
+                <input type ="button" id ="btn-delete" value="행삭제" />
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <table border ="1" id="writeTable">		
+                    <tr class ="row1">
+                        <td>
+                            <input type="checkbox" class="checkbox-test" id="1">
+                        </td>
+                        <td width="120" align="center">
+                        Title
+                        </td>
+                        <td width="400">
+                            <!-- ${board.boardTitle} -->
+                            <textarea name="title" id="utitle" class="textArea" rows="1" cols="55" placeholder="title" maxlength="100" required></textarea>
+                        </td>
+                    </tr>
+                    <tr class ="row2">
+                        <td>
+                            <input type="checkbox" class="checkbox-test" id="2">
+                        </td>
+                        <td height="300" align="center">
+                        Comment
+                        </td>
+                        <td>
+                            <!-- ${board.boardComment} -->
+                            <textarea name="content" id="ucontent" class="textArea" placeholder="comment" required></textarea>
+                        </td>
+                    </tr>
+                    <tr class="row3">
+                        <td></td>
+                        <td align="center">
+                        Writer
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                 <a href="/board/boardDeleteAction.do">삭제</a>
+                 <a href="/board/boardList.do">List</a>
+            </td>
+        </tr>
+    </table>	
+
+    <div class="keyBoard">
+
+        <div id="keyRow1" class="keyButton">
+            <div class="left">
+                <input type="button" class="key" value="ㅃ">
+                <input type="button" class="key" value="ㅉ">
+                <input type="button" class="key" value="ㄸ">
+                <input type="button" class="key" value="ㄲ">
+                <input type="button" class="key" value="ㅆ">
+            </div>
+            <div class="right">
+                <input type="button" class="key" value="ㅒ">
+                <input type="button" class="key" value="ㅖ">
+                <input type="button" class="key" value="←">
+            </div>
+        </div>
+
+        <div id="keyRow2" class="keyButton">
+            <div class="left">
+                <input type="button" class="key" value="ㅂ">
+                <input type="button" class="key" value="ㅈ">
+                <input type="button" class="key" value="ㄷ">
+                <input type="button" class="key" value="ㄱ">
+                <input type="button" class="key" value="ㅅ">
+            </div>
+            <div class="right">
+                <input type="button" class="key" value="ㅛ">
+                <input type="button" class="key" value="ㅕ">
+                <input type="button" class="key" value="ㅑ">
+                <input type="button" class="key" value="ㅐ">
+                <input type="button" class="key" value="ㅔ">
+            </div>
+        </div>
+
+        <div id="keyRow3" class="keyButton">
+            <div class="left">
+                <input type="button" class="key" value="ㅁ">
+                <input type="button" class="key" value="ㄴ">
+                <input type="button" class="key" value="ㅇ">
+                <input type="button" class="key" value="ㄹ">
+                <input type="button" class="key" value="ㅎ">
+            </div>
+            <div class="right">
+                <input type="button" class="key" value="ㅗ">
+                <input type="button" class="key" value="ㅓ">
+                <input type="button" class="key" value="ㅏ">
+                <input type="button" class="key" value="ㅣ">
+            </div>
+        </div>
+
+        <div id="keyRow4" class="keyButton">
+            <div class="center">
+                <input type="button" class="key" value="ㅋ">
+                <input type="button" class="key" value="ㅌ">
+                <input type="button" class="key" value="ㅊ">
+                <input type="button" class="key" value="ㅍ">
+                <input type="button" class="key" value="space">
+                <input type="button" class="key" value="ㅠ">
+                <input type="button" class="key" value="ㅜ">
+                <input type="button" class="key" value="ㅡ">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
